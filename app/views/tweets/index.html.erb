@@ -1,21 +1,47 @@
 <% if flash[:notice] %>
 <%= flash[:notice] %>
 <% end %>
+<html>
 
 
-<% @tweets.each do |e| %>
-
-<p>
-    <%= e.message %>
-    <%= e.tdate %>
-    <%=time_ago_in_words(e.created_at)%>前
-    <%= link_to '表示', "/tweets/#{e.id}" %>
-    <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
-    <%= link_to '編集', "/tweets/#{e.id}/edit" %>
+<body>
     
     
-</p>
-<% end %>
+    <div class="container">
+    
+    
+    <div class="left">
+      <p><a href="/tweets/new" class="btn">ツイートする</a></p>
+      
+    </div>
+    
+    
+    <div class="contents">
+     <% @tweets.each do |e| %>
+        <p>
+           
+            <div class="iconback">
+            <%= e.tdate %>
+            <%=time_ago_in_words(e.created_at)%>前<br>
+            </div>
+           
+            
+            <h3><%= e.message %></h3>
+            <%= link_to '表示', "/tweets/#{e.id}" %>
+            <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
+            <%= link_to '編集', "/tweets/#{e.id}/edit" %>
+        </p>
+        
+        <% end %>
+
+    </div>
+   </div>
+</body>
 
 
-<p><%= link_to 'ツイートする', '/tweets/new' %></p>
+</html>
+
+
+
+
+
