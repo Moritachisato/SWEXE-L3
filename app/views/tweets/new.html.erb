@@ -7,12 +7,27 @@
 </ul>
 <% end %>
 
-<%= form_for @tweet , url: {action: :create} do |f| %>
-<%= f.label :message, 'ツイート' %>
-<%= f.text_field :message %>
 
-<%= f.submit 'ツイート' %>
-<% end %>
+<div class="container">
+        <div class="left">
+    　　  <%= link_to 'ホーム', root_path %>
+        </div>
+        
+        
+        <div class="contents">
+        <p>
+        <%= form_for @tweet , url: {action: :create} do |f| %>
+        <%= f.label :message, 'ツイート' %>
+        <%= f.text_field :message %>
+        
+        <%= f.submit 'ツイート' %>
+        <% end %>
+        </p>   
+        </div>
+   </div>
 
 
-<%= link_to 'ホーム', '/' %>
+
+
+
+

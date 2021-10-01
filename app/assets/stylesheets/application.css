@@ -18,7 +18,10 @@
  
  #pageHeader{
   background-color: #00a1e9;
+  color: #fff;
  }
+ 
+
  
  body{
      background-color: #ffffff;
@@ -62,6 +65,7 @@
   border-radius: 5px;
   border-radius: 200vh;
 }
+
 
 
 

@@ -1,8 +1,19 @@
+<div class="container">
+        <div class="left">
+    　　  <%= link_to 'ホーム', root_path %>
+          <p><a href="/tweets/new" class="btn">ツイートする</a></p>
+        </div>
+        
+        
+        <div class="contents">
+        <p>
+        <%= form_for @tweet , url: {action: :update} do |f| %>
+        <%= f.label :message, 'ツイート' %>
+        <%= f.text_field :message %>
+        
+        <%= f.submit 'ツイートを更新' %>
+        <% end %>
+        </p>   
+        </div>
+   </div>
 
-
-<%= form_for @tweet , url: {action: :update} do |f| %>
-<%= f.label :message, 'ツイート' %>
-<%= f.text_field :message %>
-
-<%= f.submit 'ツイート' %>
-<% end %>

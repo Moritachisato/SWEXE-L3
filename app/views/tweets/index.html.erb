@@ -3,38 +3,36 @@
 <% end %>
 <html>
 
-
 <body>
     
     
     <div class="container">
-    
-    
-    <div class="left">
-      <p><a href="/tweets/new" class="btn">ツイートする</a></p>
-      
-    </div>
-    
-    
-    <div class="contents">
-     <% @tweets.each do |e| %>
-        <p>
-           
-            <div class="iconback">
-            <%= e.tdate %>
-            <%=time_ago_in_words(e.created_at)%>前<br>
-            </div>
-           
-            
-            <h3><%= e.message %></h3>
-            <%= link_to '表示', "/tweets/#{e.id}" %>
-            <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
-            <%= link_to '編集', "/tweets/#{e.id}/edit" %>
-        </p>
+        <div class="left">
+    　　  
+          <p><a href="/tweets/new" class="btn">ツイートする</a></p>
+        </div>
         
-        <% end %>
-
-    </div>
+        
+        <div class="contents">
+           
+         <% @tweets.each do |e| %>
+            <p>
+                
+                <div class="iconback">
+                <%= e.tdate %>
+                <%=time_ago_in_words(e.created_at)%>前<br>
+                </div>
+               
+                
+                <h3><%= e.message %></h3>
+                <%= link_to '表示', "/tweets/#{e.id}" %>
+                <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
+                <%= link_to '編集', "/tweets/#{e.id}/edit" %>
+            </p>
+            
+            <% end %>
+    
+        </div>
    </div>
 </body>
 
