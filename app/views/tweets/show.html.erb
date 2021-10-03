@@ -15,17 +15,21 @@
                   <li><span class="fa-li"><i class="far fa-user fa-fw"></i></span>プロフィール</li>
                   <li><span class="fa-li"><i class="fas fa-ellipsis-h fa-fw"></i></span>もっと見る</li>
                 </ul>
-    　　  <%= link_to 'ホーム', root_path %>
           <p><a href="/tweets/new" class="btn">ツイートする</a></p>
         </div>
         
         
         <div class="contents">
         <p>
-        <%= @tweet.message %>
-        <%= @tweet.tdate %>
-        <%=time_ago_in_words(@tweet.created_at)%>前
+            <div class="iconback">
+                <strong>ちくわ</strong>
+                <%= @tweet.tdate %>
+                <%=time_ago_in_words(@tweet.created_at)%>前<br>
+            </div>
+        <h3><%= @tweet.message %></h3>
+        <%= image_tag 'cosmos.jpg' %>
         </p>   
+        
         </div>
    </div>
 
