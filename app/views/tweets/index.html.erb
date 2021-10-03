@@ -40,6 +40,7 @@
                    
                     
                     <h3><%= e.message %></h3>
+                    <%= image_tag 'cosmos.jpg' %>
                     <%= link_to '表示', "/tweets/#{e.id}" %>
                     <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
                     <%= link_to '編集', "/tweets/#{e.id}/edit" %>
