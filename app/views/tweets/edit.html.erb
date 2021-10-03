@@ -6,6 +6,7 @@
         
         
         <div class="contents">
+        <%= render 'tweets/form'%>
         <p>
         <%= form_for @tweet , url: {action: :update} do |f| %>
         <%= f.label :message, 'ツイート' %>

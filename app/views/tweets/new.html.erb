@@ -15,6 +15,7 @@
         
         
         <div class="contents">
+        <%= render 'tweets/form'%>
         <p>
         <%= form_for @tweet , url: {action: :create} do |f| %>
         <%= f.label :message, 'ツイート' %>
