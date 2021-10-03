@@ -52,8 +52,8 @@
     color: #808080;
 }
 
-.btn{
-   display: block;
+.tweetbtn{
+  display: block;
   width: 160px;
   height: 36px;
   text-align: center;
@@ -61,11 +61,23 @@
   line-height: 36px;
   text-decoration: none;
   background-color: #00a1e9;
-
   border-radius: 5px;
   border-radius: 200vh;
 }
 
+
+.btn{
+  display: block;
+  width: 160px;
+  height: 36px;
+  text-align: center;
+  color: #fff;
+  line-height: 36px;
+  text-decoration: none;
+  background-color: #00a1e9;
+  border-radius: 5px;
+  border-radius: 200vh;
+}
 
 
 
